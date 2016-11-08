@@ -3,7 +3,17 @@
  */
 
 const posts = function (state = [], action) {
-    switch (action) {
+    const i = action.index;
+    switch (action.type) {
+        case "increment_likes":
+            console.log(action.type);
+            //TODO look for an optimal way to do this
+            return [
+                ...state.slice(0, i),
+                {...state[i], likes: state[i].likes + 1},
+                ...state.slice(i + 1),
+            ];
+            break;
         default:
             return state;
     }

@@ -1,4 +1,3 @@
-// let's go!
 import React from "react";
 import {Router, Route, IndexRoute} from "react-router";
 import {render} from "react-dom";
@@ -13,7 +12,7 @@ render(
         <Router history={history}>
             <Route path="/" component={App}>
                 <IndexRoute component={PhotoGrid}/>
-                <Route path="/view/:postid" component={Single}/>
+                <Route path="/view/:postId" component={Single}/>
             </Route>
         </Router>
     </Provider>, document.getElementById("root"));
