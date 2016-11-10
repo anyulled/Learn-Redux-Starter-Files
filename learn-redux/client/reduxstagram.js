@@ -7,6 +7,8 @@ import App from "./components/App";
 import Single from "./components/Single";
 import PhotoGrid from "./components/PhotoGrid";
 
+import css from './styles/style.styl';
+
 render(
     <Provider store={store}>
         <Router history={history}>

@@ -29,4 +29,21 @@ function removeComment(postId, commentId) {
 
 }
 
+/*function addPost() {
+ fetch("https://www.instagram.com/anyulled/media/")
+ .then((data)=> {
+ console.log(data.data);
+ return {
+ type: "add_posts",
+ payload: data.data
+ }
+ }).catch((error)=> {
+ console.log(error);
+ return {
+ type: "error",
+ error
+ }
+ });
+ }*/
+
 export {increment, addComment, removeComment};
