@@ -8,15 +8,15 @@ class Comments extends React.Component {
         super(props);
         this.handleComment = this.handleComment.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        //this.handleChange = this.handleChange.bind(this);
+        //this.removeComment = this.props.removeComment.bind(this);
     }
 
     handleComment(comment, index) {
         return (<div className="comment" key={index}>
-            <p><
-                strong>{comment.user}</strong>
+            <p><strong>{comment.user}</strong>
                 {comment.text}
-                <button className="remove-comment">&times;</button>
+                <button className="remove-comment"
+                        onClick={this.handleRemoveComment.bind(this, this.props.params.postId, index)}>&times;</button>
             </p>
         </div>);
     }
@@ -26,8 +26,12 @@ class Comments extends React.Component {
         const {postId} = this.props.params;
         const {author, comment} = this.refs;
         this.props.addComment(postId, author.value, comment.value);
-        this.refs.author.value = "";
-        this.refs.comment.value = "";
+        this.refs.commentForm.reset();
+    }
+
+    handleRemoveComment(comment, index) {
+        console.log(`deleting comment ${comment}, index ${index}`);
+        this.props.removeComment(comment, index);
     }
 
     render() {

@@ -11,8 +11,11 @@ const postComments = function (state = [], action) {
                 text: action.comment
             }];
         case "remove_comment":
-            console.log("remove comment");
-            return state;
+            console.log("remove comment", action);
+            return [
+                ...state.slice(0, action.commentId),
+                ...state.slice(action.commentId + 1)
+            ];
         default:
             return state;
     }
