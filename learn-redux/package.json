@@ -20,7 +20,7 @@
   "dependencies": {
     "babel-core": "^6.7.7",
     "babel-eslint": "^6.0.4",
-    "babel-loader": "^6.2.4",
+    "babel-loader": "^7.0.0",
     "babel-plugin-react-transform": "^2.0.2",
     "babel-plugin-transform-object-rest-spread": "^6.6.5",
     "babel-plugin-transform-react-display-name": "^6.5.0",
@@ -46,7 +46,7 @@
     "rimraf": "^2.5.2",
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
-    "stylus-loader": "^2.0.0",
+    "stylus-loader": "^3.0.0",
     "webpack": "^5.0.0",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
